@@ -21,6 +21,7 @@ const client = new MongoClient(uri, {
   },
 });
 
+// Get server
 app.get("/", (req, res) => {
   res.send("Smart Server Is Running");
 });
@@ -166,7 +167,7 @@ async function run() {
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
-      "Pinged your deployment.You successfully connected to MongoDB!"
+      "Pinged your deployment.You successfully connected to MongoDB Atlas!"
     );
   } finally {
   }
